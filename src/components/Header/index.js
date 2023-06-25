@@ -2,7 +2,7 @@ import {Link, withRouter} from 'react-router-dom'
 import Cookies from 'js-cookie'
 import './index.css'
 
-const websiteLogoUrl = 'https://assets.ccbp.in/frontend/react-js/logo-img.png'
+const websiteLogo = 'https://assets.ccbp.in/frontend/react-js/logo-img.png'
 
 const Header = props => {
   const onClickLogout = () => {
@@ -13,22 +13,26 @@ const Header = props => {
 
   return (
     <nav className="navbar">
-      <div className="header-container">
-        <img src={websiteLogoUrl} alt="logo" className="image" />
-        <div>
+      <ul>
+        <li>
           <Link to="/">
-            <h1 className="heading">Home</h1>
+            <img src={websiteLogo} alt="website logo" />
+          </Link>
+        </li>
+        <li>
+          <Link to="/">
+            <h1>Home</h1>
           </Link>
           <Link to="/jobs">
-            <h1 className="heading">Jobs</h1>
+            <h1>Jobs</h1>
           </Link>
-        </div>
-        <div>
-          <button className="button" type="button" onClick={onClickLogout}>
+        </li>
+        <li>
+          <button type="button" onClick={onClickLogout}>
             Logout
           </button>
-        </div>
-      </div>
+        </li>
+      </ul>
     </nav>
   )
 }

@@ -23,7 +23,8 @@ class JobItem extends Component {
     this.getJobData()
   }
 
-  getJobData = async () => {
+  // eslint-disable-next-line no-unused-vars
+  getJobData = async props => {
     const {match} = this.props
     const {params} = match
     const {id} = params
@@ -74,6 +75,7 @@ class JobItem extends Component {
       )
       this.setState({
         jobDataDetails: updatedJobDetailsData,
+
         similarJobsData: updatedSimilarJobDetails,
         apiStatus: apiStatusConstants.success,
       })

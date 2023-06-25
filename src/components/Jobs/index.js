@@ -1,7 +1,7 @@
 import {Component} from 'react'
 import Loader from 'react-loader-spinner'
 import Cookies from 'js-cookie'
-import JobItem from '../JobItem'
+import AllJobItem from '../AllJobItem'
 import Header from '../Header'
 
 import './index.css'
@@ -193,7 +193,7 @@ class Jobs extends Component {
         <ul>
           [
           {jobsData.map(eachItem => (
-            <JobItem key={eachItem.id} item={eachItem} />
+            <AllJobItem key={eachItem.id} item={eachItem} />
           ))}
           ]
         </ul>
